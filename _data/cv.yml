@@ -1,189 +1,191 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Amogh Gupta
+  label: MS Computer Science Student, UNC Chapel Hill
+  email: guam@unc.edu
+  phone: +1 984 386 1565
+  location: Chapel Hill, NC
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >
+    MS Computer Science student at UNC Chapel Hill working on LLM alignment, safe-helpfulness, and
+    responsible AI. Research on self-reframing distillation for safe and helpful models, and on
+    auditing intersectional bias in LLM-generated explanations. Prior engineering experience across
+    Amazon Alexa Audio, Nomura, Ernst & Young, and DRDO.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: FieryDeveloper
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: connectamogh
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: University of North Carolina at Chapel Hill
+        location: Chapel Hill, NC
+        url: https://cs.unc.edu/
+        area: Computer Science
+        studyType: Master of Science
+        start_date: 2025-08
+        end_date: 2027-05
         highlights:
-          - Description 1.
-          - Description 2.
+          - Focused on NLP, AI, and research-driven development.
+          - Teaching Assistant for DATA 520 — Research Methods for Socially Responsible AI.
+          - Researcher in the Society-Centered AI Lab (SAIL) with Dr. Neil Gaikwad on Responsible AI.
+          - Researching with Prof. Snigdha Chaturvedi on LLM Alignment.
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Indian Institute of Information Technology Pune
+        location: Pune, India
+        url: https://www.iiitp.ac.in/
+        area: Computer Science Engineering
+        studyType: Bachelor of Technology
+        start_date: 2021-08
+        end_date: 2025-06
+        score: "CGPA 9.22"
         highlights:
-          - Description 1.
-          - Description 2.
+          - Consistently ranked among the top 3 out of 175 students.
+          - Sole student to score a 10/10 SGPA in the 7th semester.
+
+      - institution: Indian Institute of Information Technology Pune
+        location: Pune, India
+        url: https://www.iiitp.ac.in/
+        area: Machine Learning
+        studyType: Honors
+        start_date: 2023-08
+        end_date: 2025-06
+        score: "CGPA 9.75"
+        highlights:
+          - Ranked 1st in batch.
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Amazon
+        position: Software Development Engineer Intern — Alexa Audio
+        location: Seattle, WA
+        start_date: 2026-05
+        end_date: 2026-08
         highlights:
-          - Relativity
-          - Description 2.
+          - Built A3LS, an accent-audio testing service generating TTS across 13 accents and scoring per-accent ASR degradation (WER/AIER), via a Step Functions pipeline (Java Lambda, Coral/API Gateway) that fans out over tens of thousands of (utterance x accent) items per run.
+          - Shipped a React/Cloudscape analytics dashboard over a CloudWatch metrics API, surfacing per-accent WER/AIER, latency percentiles, and GPU/concurrency, with skeleton loading and caching for instant loads.
+          - Authored HLD/LLD design docs and drove cross-team design reviews to integrate an accent dimension for injecting synthetic audio into production ASR test runs.
+          - Delivered across 80+ code reviews spanning 4 Brazil packages (Smithy, Java, CDK, React), owning CI/CD via Pipelines/Apollo.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Nomura
+        position: Software Engineering Intern
+        location: Mumbai, India
+        start_date: 2025-01
+        end_date: 2025-06
+        summary: React, Java Spring Boot, SQL, Jenkins, Agile.
         highlights:
-          - Description 1.
-          - Description 2.
+          - Worked on an internal budgeting and financial planning application used across multiple teams.
+          - Resolved over 40 JIRA tickets in 6 months, focusing on performance improvements, bug fixes, and user experience.
+          - Delivered features using React on the frontend and Spring Boot for backend services.
+          - Collaborated within an Agile team, using Jenkins for CI/CD and SQL for data-layer operations.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: AIAssistant Startup
+        position: Backend Intern
+        location: California (Remote)
+        start_date: 2024-08
+        end_date: 2024-12
+        summary: A startup focused on voice and agentic AI solutions. FastAPI, Python, Postman.
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Developed backend solutions for multiple clients using Twilio, Deepgram, and ElevenLabs.
+          - Built prototypes for client demos, including call summarization, healthcare assistants, and lead-generation voice systems.
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - company: Ernst and Young
+        position: Data and GenAI Intern
+        location: Pune, India
+        start_date: 2024-05
+        end_date: 2024-08
+        highlights:
+          - Worked on business and technical solutions for Fortune 100 clients driven by Generative AI.
+          - Developed a chatbot with a RAG pipeline over 10,000+ documents, improving search efficiency by 200% via metadata filters that narrowed the search space from 10,000 documents to 50.
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - company: IIT Kharagpur
+        position: Research Intern — Prompting and LLMs
+        location: Pune, India
+        start_date: 2024-04
+        end_date: 2024-08
+        highlights:
+          - Participated in red-teaming to identify and analyze safety limitations and vulnerabilities of LLMs.
+          - Implemented several chain-of-thought strategies to strengthen LLM robustness and ethical application, with custom Python scripts for automated output evaluation.
+          - Evaluated jailbreak robustness of ChatGPT, Gemini, Nous-Hermes, Mixtral Instruct, Cohere Coral and other LLMs using custom multilingual prompts, cross-evaluating outcomes with multiple HuggingFace sentiment models.
+
+      - company: IIT Indore
+        position: Research Intern — Natural Language Processing
+        location: Pune, India
+        start_date: 2024-01
+        end_date: 2024-04
+        highlights:
+          - Extracted critical information from disaster-related tweets using advanced text summarization, reducing a dataset of 3,000 tweets to the 40 most crucial.
+          - Applied large language models and integer linear programming to improve summarization accuracy and efficiency.
+          - Engineered a flood detection project applying segmentation techniques to improve classification outcomes.
+
+      - company: RCI — Defence Research and Development Organisation (DRDO)
+        position: Machine Learning Intern
+        location: Hyderabad, India
+        start_date: 2023-07
+        end_date: 2023-08
+        highlights:
+          - Used Splunk and Kafka to improve the system's security measures.
+          - Performed log analysis and anomaly detection on over one million logs, reducing major outliers to a few hundred; the proof of concept was showcased to senior scientists for possible production deployment.
+          - Applied One-Class SVM, KMeans, and Isolation Forests to improve detection accuracy.
+          - Developed a dynamic web application with HTML, CSS, JavaScript, Bootstrap, and Flask.
+
+      - company: Jio Platforms Limited
+        position: Artificial Intelligence Intern
+        location: Mumbai, India
+        start_date: 2023-05
+        end_date: 2023-07
+        highlights:
+          - Worked on "Improving Operations with AI", focused on improving business operations using advanced AI.
+          - Designed and deployed recommendation algorithms, including Apriori, to enrich decision-making.
+          - Built a web application presenting the implemented features to key stakeholders.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "SHARD: Safe and Helpful Alignment via Self-Reframing Distillation"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Amogh Gupta
+        publisher: EMNLP 2026 Findings
+        releaseDate: 2026
+        summary: >
+          Large language models often struggle with sensitive prompts — refusing outright, providing generic
+          safety boilerplate, or failing to address legitimate informational needs that can be answered safely.
+          SHARD is a self-reframing distillation method to improve safe-helpfulness.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "Compounding Disadvantage: Auditing Intersectional Bias in LLM-Generated Explanations Across Indian and American STEM Education"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Amogh Gupta
+        publisher: ACM Conference on Fairness, Accountability, and Transparency (FAccT) 2026
+        releaseDate: 2026
+        summary: >
+          Audits intersectional bias in AI-generated explanations across Indian and American STEM educational
+          contexts, showing how disadvantages compound across language, caste, and social context rather than
+          simply adding up.
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: GenAI & LLMs
+        icon: fa-solid fa-robot
+        keywords: "LLM Alignment, Post-Training, Supervised Fine-Tuning (SFT), RLHF, DPO, LoRA/QLoRA, Inference Optimization, vLLM, DeepSpeed, Distributed Training, GPU/TPU Scaling, Prompt Engineering, RAG, Red-Teaming, Model Evaluation, Interpretability, Responsible AI"
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - name: Programming & Frameworks
+        icon: fa-solid fa-code
+        keywords: "Python, C/C++, Java, PyTorch, TensorFlow, Hugging Face Transformers, LangChain, LlamaIndex"
 
-      - name: English
-        summary: "Fluent"
+      - name: AI/ML Expertise
+        icon: fa-solid fa-brain
+        keywords: "Deep Learning, NLP, Large Language Models, Generative AI, Computer Vision (CNNs, Vision Transformers), Reinforcement Learning"
+
+      - name: Data & Databases
+        icon: fa-solid fa-database
+        keywords: "SQL, MongoDB, Vector Databases (FAISS, Pinecone), Pandas, NumPy, PySpark"
+
+      - name: Web & Dev Tools
+        icon: fa-solid fa-laptop-code
+        keywords: "Flask, FastAPI, Node.js, Express.js, Spring Boot, React, JavaScript, TypeScript, CSS, Bootstrap, REST APIs"
+
+      - name: Version Control & Deployment
+        icon: fa-solid fa-code-branch
+        keywords: "Git/GitHub, Docker, Kubernetes, CI/CD (Jenkins), Cloud (AWS, GCP, Azure)"
 
     Interests:
-      - name: Physics
+      - name: Research Interests
         icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+        keywords: "LLM Alignment, Safe-Helpfulness, Responsible AI, Red-Teaming, Algorithmic Fairness, Model Evaluation"

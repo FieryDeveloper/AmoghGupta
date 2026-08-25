@@ -1,9 +1,7 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"EMNLP":
+  url: https://2026.emnlp.org/
+  color: "#4b2e83"
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+"FAccT":
+  url: https://facctconference.org/
+  color: "#0f6b5c"
