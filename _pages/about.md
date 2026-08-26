@@ -33,4 +33,52 @@ My research asks a question I find genuinely unresolved: **how do we make a mode
 
 Before UNC, I completed a B.Tech in Computer Science at the **Indian Institute of Information Technology Pune**, graduating with Honors in Machine Learning (1st in batch). Along the way I have built systems at **Amazon** (Alexa Audio), **Nomura**, **Ernst & Young**, and **DRDO**, and done research at **IIT Kharagpur** and **IIT Indore** on red-teaming, multilingual jailbreaks, and disaster-tweet summarization. That mix matters to me: I like alignment questions that survive contact with a production system.
 
+<style>
+  .xp-mini-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: .4rem; margin: 2.2rem 0 .3rem;
+  }
+  .xp-mini-head h3 { margin: 0; font-size: 1.05rem; letter-spacing: .05em; text-transform: uppercase; color: var(--global-text-color); opacity: .68; }
+  .xp-mini-head a { font-size: .85rem; white-space: nowrap; }
+  .xp-mini { margin: 0; padding: 0; list-style: none; }
+  .xp-mini li {
+    display: grid; grid-template-columns: 46px 1fr; gap: .9rem;
+    align-items: center; padding: .85rem 0;
+    border-top: 1px solid var(--global-divider-color);
+  }
+  .xp-mini img { width: 46px; height: 46px; border-radius: 11px; display: block; object-fit: contain; }
+  .xp-mini-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .3rem 1rem; }
+  .xp-mini-co { font-weight: 700; font-size: 1rem; }
+  .xp-mini-when { font-size: .8rem; color: var(--global-text-color); opacity: .68; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .xp-mini-role { font-size: .88rem; color: var(--global-text-color); opacity: .68; margin-top: .1rem; }
+</style>
+
+<div class="xp-mini-head">
+  <h3>Recent experience</h3>
+  <a href="{{ '/experience/' | relative_url }}">See all experience &rarr;</a>
+</div>
+
+<ul class="xp-mini">
+  <li>
+    <img src="{{ '/assets/img/logos/amazon.svg' | relative_url }}" alt="Amazon logo" loading="lazy" />
+    <div>
+      <div class="xp-mini-row">
+        <span class="xp-mini-co">Amazon</span>
+        <span class="xp-mini-when">May 2026 &ndash; Aug 2026</span>
+      </div>
+      <div class="xp-mini-role">Software Development Engineer Intern &middot; Alexa Audio &middot; Seattle, WA</div>
+    </div>
+  </li>
+  <li>
+    <img src="{{ '/assets/img/logos/nomura.svg' | relative_url }}" alt="Nomura logo" loading="lazy" />
+    <div>
+      <div class="xp-mini-row">
+        <span class="xp-mini-co">Nomura</span>
+        <span class="xp-mini-when">Jan 2025 &ndash; Jun 2025</span>
+      </div>
+      <div class="xp-mini-role">Software Engineering Intern &middot; Mumbai, India</div>
+    </div>
+  </li>
+</ul>
+
 I am always glad to hear from people working on alignment, evaluation, or responsible AI — feel free to [reach out](mailto:guam@unc.edu).
