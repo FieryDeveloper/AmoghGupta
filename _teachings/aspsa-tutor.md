@@ -1,17 +1,17 @@
 ---
 layout: course
 title: "ASPSA Tutor — MATH 110, DATA 110, COMP 110"
-description: Academic tutor for the Academic Support Program for Student-Athletes, teaching over 40 students across three introductory courses.
+description: Academic tutor for the Academic Support Program for Student-Athletes, Spring 2026. Taught over 40 students across three introductory courses.
 instructor: UNC Academic Support Program for Student-Athletes
 year: 2026
-term: Ongoing
+term: Spring
 location: UNC Chapel Hill
 course_id: aspsa-tutor
 ---
 
-**Role:** Tutor, Academic Support Program for Student-Athletes (ASPSA)
+**Role:** Tutor, Academic Support Program for Student-Athletes (ASPSA) · Spring 2026
 
-I tutor for ASPSA at UNC Chapel Hill, working with **over 40 students across three subjects**. The three courses sit at the entry point of the math, data science, and computer science sequences, so most of the work is helping students build a first working mental model of a subject rather than patching a specific gap.
+I tutored for ASPSA at UNC Chapel Hill in Spring 2026, working with **over 40 students across three subjects**. The three courses sit at the entry point of the math, data science, and computer science sequences, so most of the work was helping students build a first working mental model of a subject rather than patching a specific gap.
 
 ## MATH 110 · Algebra
 
