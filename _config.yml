@@ -11,9 +11,7 @@ contact_note: >
   safe-helpfulness, and responsible AI evaluation.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   MS Computer Science student at UNC Chapel Hill working on LLM alignment, safe-helpfulness, and responsible AI.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text:
 keywords: Amogh Gupta, LLM alignment, responsible AI, NLP, machine learning, UNC Chapel Hill # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧭 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -96,7 +94,7 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
