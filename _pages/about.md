@@ -87,3 +87,55 @@ I am always glad to hear from people working on alignment, evaluation, or respon
     </div>
   </li>
 </ul>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Amogh Gupta",
+  "givenName": "Amogh",
+  "familyName": "Gupta",
+  "url": "https://fierydeveloper.github.io/AmoghGupta/",
+  "image": "https://fierydeveloper.github.io/AmoghGupta/assets/img/prof_pic.jpg",
+  "email": "mailto:guam@unc.edu",
+  "jobTitle": "Graduate Researcher and Teaching Assistant",
+  "description": "Master's student in Computer Science at UNC Chapel Hill researching LLM alignment, safe-helpfulness, and responsible AI. Author of SHARD (EMNLP 2026 Findings) and Compounding Disadvantage (ACM FAccT 2026).",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of North Carolina at Chapel Hill",
+    "department": {
+      "@type": "Organization",
+      "name": "Department of Computer Science"
+    },
+    "url": "https://cs.unc.edu/"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Information Technology Pune",
+      "url": "https://www.iiitp.ac.in/"
+    }
+  ],
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of North Carolina at Chapel Hill"
+  },
+  "knowsAbout": [
+    "LLM Alignment",
+    "Large Language Models",
+    "Natural Language Processing",
+    "Responsible AI",
+    "AI Safety",
+    "Algorithmic Fairness",
+    "Red-Teaming",
+    "Machine Learning",
+    "Model Evaluation"
+  ],
+  "sameAs": [
+    "https://github.com/FieryDeveloper",
+    "https://www.linkedin.com/in/connectamogh",
+    "https://scholar.google.com/citations?user=BOabN_gAAAAJ",
+    "https://x.com/AmoghGupta04"
+  ]
+}
+</script>
