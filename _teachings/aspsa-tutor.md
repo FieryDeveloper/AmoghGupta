@@ -3,6 +3,8 @@ layout: course
 title: "ASPSA Tutor — MATH 110, DATA 110, COMP 110"
 description: Academic tutor for the Academic Support Program for Student-Athletes, teaching over 40 students across three introductory courses.
 instructor: UNC Academic Support Program for Student-Athletes
+year: 2026
+term: Ongoing
 location: UNC Chapel Hill
 course_id: aspsa-tutor
 ---
