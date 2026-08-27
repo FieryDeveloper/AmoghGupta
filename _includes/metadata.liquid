@@ -1,7 +1,10 @@
 {%- comment -%}
 Local override of al_folio_core's metadata.liquid.
-Only change from upstream: twitter:card becomes summary_large_image when an
-og_image is set, so shared links render a full-width preview card.
+Changes from upstream:
+  - twitter:card becomes summary_large_image when an og_image is set, so
+    shared links render a full-width preview card.
+  - twitter:title leads with the site name instead of the bare page slug
+    (it previously rendered as just "about" on the home page).
 Delete this file to fall back to the gem's version.
 {%- endcomment -%}
 {% if site.enable_google_verification or site.enable_bing_verification %}
@@ -77,7 +80,7 @@ Delete this file to fall back to the gem's version.
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="{% if og_image_url %}summary_large_image{% else %}summary{% endif %}">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.title and page.url != '/' %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
     <meta name="twitter:image" content="{{ og_image_url }}">
