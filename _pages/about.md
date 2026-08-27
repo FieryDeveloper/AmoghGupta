@@ -33,6 +33,8 @@ My research asks a question I find genuinely unresolved: **how do we make a mode
 
 Before UNC, I completed a B.Tech in Computer Science at the **Indian Institute of Information Technology Pune**, graduating with Honors in Machine Learning (1st in batch). Along the way I have built systems at **Amazon** (Alexa Audio), **Nomura**, **Ernst & Young**, and **DRDO**, and done research at **IIT Kharagpur** and **IIT Indore** on red-teaming, multilingual jailbreaks, and disaster-tweet summarization. That mix matters to me: I like alignment questions that survive contact with a production system.
 
+I am always glad to hear from people working on alignment, evaluation, or responsible AI — feel free to [reach out](mailto:guam@unc.edu).
+
 <style>
   .xp-mini-head {
     display: flex; align-items: baseline; justify-content: space-between;
@@ -80,5 +82,3 @@ Before UNC, I completed a B.Tech in Computer Science at the **Indian Institute o
     </div>
   </li>
 </ul>
-
-I am always glad to hear from people working on alignment, evaluation, or responsible AI — feel free to [reach out](mailto:guam@unc.edu).
