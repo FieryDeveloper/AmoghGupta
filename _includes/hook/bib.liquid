@@ -1,0 +1,29 @@
+{%- comment -%}
+  Per-entry hook rendered by al_folio_core's bib layout.
+
+  Renders a large teaser figure beneath the entry text for any BibTeX entry
+  that defines a `figure` field, e.g.
+
+      figure = {shard.png}
+
+  Images are resolved from /assets/img/publication_preview/. Entries without a
+  `figure` field render nothing. Delete this file to disable the behaviour.
+{%- endcomment -%}
+
+{% if entry.figure %}
+  {% if entry.figure contains '://' %}
+    {% assign bib_figure_url = entry.figure %}
+  {% else %}
+    {% capture bib_figure_url %}{{ entry.figure | prepend: '/assets/img/publication_preview/' | relative_url }}{% endcapture %}
+  {% endif %}
+  <div class="bib-figure" style="margin: 0.9rem 0 0.4rem;">
+    <a href="{{ bib_figure_url }}" target="_blank" rel="noopener" title="Open full-size figure">
+      <img
+        src="{{ bib_figure_url }}"
+        alt="Figure from {{ entry.title | escape }}"
+        loading="lazy"
+        style="width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--global-divider-color); background: #fff; padding: 6px;"
+      >
+    </a>
+  </div>
+{% endif %}

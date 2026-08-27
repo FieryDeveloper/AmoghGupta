@@ -394,6 +394,7 @@ filtered_bibtex_keywords:
     code,
     dimensions,
     eprint,
+    figure,
     google_scholar_id,
     hal,
     html,
