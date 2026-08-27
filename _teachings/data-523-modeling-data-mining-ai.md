@@ -2,7 +2,6 @@
 layout: course
 title: "DATA 523: Modeling and Data Mining for Artificial Intelligence"
 description: Teaching Assistant — current semester. Cutting-edge machine learning methods and foundational modeling and data mining techniques for AI.
-instructor: University of North Carolina at Chapel Hill
 year: 2026
 term: Fall
 location: UNC Chapel Hill
