@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Master's student in Computer Science at the **University of North Carolina at Chapel Hill**, where I work on natural language processing and the alignment of large language models. I am a researcher in the **Society-Centered AI Lab (SAIL)** with [Dr. Neil Gaikwad](https://www.cs.unc.edu/~gaikwad/) on responsible AI, and I work with [Prof. Snigdha Chaturvedi](https://sites.google.com/site/snigdhac/) on LLM alignment. I also serve as a Teaching Assistant for _DATA 520: Research Methods for Socially Responsible AI_.
+I am a Master's student in Computer Science at the **University of North Carolina at Chapel Hill**, where I work on natural language processing and the alignment of large language models. My MS research advisor is **Prof. Snigdha Chaturvedi**, whose [Chaturvedi Lab](https://nlp.cs.unc.edu/) I work in on LLM alignment. I am also a researcher in the Society-Centered AI Lab (SAIL) with [Dr. Neil Gaikwad](https://www.cs.unc.edu/~gaikwad/) on responsible AI, and I [teach and tutor]({{ '/teaching/' | relative_url }}) across the data science and computer science curricula.
 
 My research asks a question I find genuinely unresolved: **how do we make a model safe without making it useless?** Aligned models frequently over-refuse — they decline a sensitive prompt outright, or return generic safety boilerplate, when the user's underlying information need could have been met safely. My work on **SHARD** introduces self-reframing distillation as a way to recover that lost helpfulness without weakening safety. In parallel, I audit what alignment leaves behind: my FAccT 2026 paper shows how bias in LLM-generated educational explanations _compounds_ across language, caste, and social context rather than simply adding up across Indian and American STEM settings.
 
@@ -48,7 +48,10 @@ I am always glad to hear from people working on alignment, evaluation, or respon
     align-items: center; padding: .85rem 0;
     border-top: 1px solid var(--global-divider-color);
   }
-  .xp-mini img { width: 46px; height: 46px; border-radius: 11px; display: block; object-fit: contain; }
+  .xp-mini img {
+    width: 46px; height: 46px; border-radius: 11px; display: block; object-fit: contain;
+    background: #fff; padding: 5px; border: 1px solid var(--global-divider-color);
+  }
   .xp-mini-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .3rem 1rem; }
   .xp-mini-co { font-weight: 700; font-size: 1rem; }
   .xp-mini-when { font-size: .8rem; color: var(--global-text-color); opacity: .68; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -62,7 +65,7 @@ I am always glad to hear from people working on alignment, evaluation, or respon
 
 <ul class="xp-mini">
   <li>
-    <img src="{{ '/assets/img/logos/amazon.svg' | relative_url }}" alt="Amazon logo" loading="lazy" />
+    <img src="{{ '/assets/img/logos/amazon.png' | relative_url }}" alt="Amazon logo" loading="lazy" />
     <div>
       <div class="xp-mini-row">
         <span class="xp-mini-co">Amazon</span>
@@ -72,7 +75,7 @@ I am always glad to hear from people working on alignment, evaluation, or respon
     </div>
   </li>
   <li>
-    <img src="{{ '/assets/img/logos/nomura.svg' | relative_url }}" alt="Nomura logo" loading="lazy" />
+    <img src="{{ '/assets/img/logos/nomura.jpg' | relative_url }}" alt="Nomura logo" loading="lazy" />
     <div>
       <div class="xp-mini-row">
         <span class="xp-mini-co">Nomura</span>

@@ -1,24 +1,18 @@
 ---
 layout: course
 title: "DATA 520: Research Methods for Socially Responsible AI"
-description: Graduate course on research methods for studying and building AI systems that are accountable to the societies they operate in. I serve as the Teaching Assistant.
+description: Teaching Assistant, Fall 2025. A research-focused course on socially and ethically responsible AI, taught by Dr. Neil Gaikwad.
 instructor: Dr. Neil Gaikwad
 year: 2025
 term: Fall
-location: University of North Carolina at Chapel Hill
+location: UNC Chapel Hill
 course_id: data-520
 ---
 
-## Role
+**Role:** Teaching Assistant · Fall 2025
 
-I am the **Teaching Assistant** for DATA 520 at UNC Chapel Hill, supporting graduate students working on research methods for socially responsible AI.
+DATA 520 — _Research Methods for Socially Responsible AI: An Ethical Expedition_ — immerses students in socially and ethically responsible artificial intelligence. Emphasizing hands-on experience, it guides students through conducting ethically responsible AI research with a focus on AI fairness, societal impacts, and real-world applications.
 
-## About the course
+Students collaborate in teams, selecting a research area and societal problem from broader data science themes, and pursue a semester-long project under the guidance of faculty and graduate teaching assistants. The course draws on science and technology studies, AI ethics, and social theory, building skills for finding and synthesizing research across disciplines and translating between technical and social perspectives on datafication, algorithms, and AI.
 
-DATA 520 covers the methodological toolkit needed to study AI systems as social systems: how to design an evaluation that measures what you claim it measures, how to audit a model for disparate behavior across populations, and how to reason about the gap between a benchmark score and a real-world outcome.
-
-The material sits close to my own research on LLM alignment and bias auditing, which makes TAing it unusually useful — the questions students ask about study design are frequently the same questions I have to answer in my own work.
-
-## Getting in touch
-
-Students in the course are welcome to reach me at [guam@unc.edu](mailto:guam@unc.edu) with questions about assignments, project scoping, or methods.
+The material sits close to my own research on LLM alignment and bias auditing, which made TAing it unusually useful — the questions students asked about study design were frequently the same questions I had to answer in my own work.

@@ -2,8 +2,8 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: courses I have supported as a teaching assistant.
+description: teaching assistantships and tutoring at UNC Chapel Hill.
 nav: true
-nav_order: 4
+nav_order: 3
 calendar: false
 ---

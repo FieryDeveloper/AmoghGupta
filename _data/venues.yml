@@ -5,3 +5,13 @@
 "FAccT":
   url: https://facctconference.org/
   color: "#0f6b5c"
+
+"INDISCON":
+  url: https://ieeexplore.ieee.org/
+  color: "#00629b"
+
+"ICIT":
+  color: "#8a4b08"
+
+"Preprint":
+  color: "#6b7280"

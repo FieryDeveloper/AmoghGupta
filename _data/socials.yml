@@ -5,7 +5,7 @@ cv_pdf: /assets/pdf/AmoghGupta_CV.pdf # path to your CV PDF file
 email: guam@unc.edu # your email address
 github_username: FieryDeveloper # your GitHub username
 linkedin_username: connectamogh # your LinkedIn username
-# scholar_userid: # your Google Scholar ID (find it in the URL of your Scholar profile: ...user=THIS_PART)
+scholar_userid: BOabN_gAAAAJ # your Google Scholar ID
 # orcid_id: # your ORCID iD (e.g. 0000-0002-1825-0097)
 # x_username: # your X/Twitter handle
 rss_icon: true # comment this line to hide the RSS icon

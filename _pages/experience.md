@@ -4,7 +4,7 @@ permalink: /experience/
 title: experience
 description: industry roles and research internships, in reverse chronological order.
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 <style>
@@ -20,7 +20,9 @@ nav_order: 3
   .xp-item:first-child { border-top: none; padding-top: .6rem; }
   .xp-logo {
     width: 64px; height: 64px; border-radius: 14px;
-    display: block; object-fit: contain; background: transparent;
+    display: block; object-fit: contain;
+    background: #fff; padding: 6px;
+    border: 1px solid var(--global-divider-color);
   }
   .xp-head {
     display: flex; flex-wrap: wrap; align-items: baseline;
@@ -45,7 +47,7 @@ nav_order: 3
   .xp-section-title:first-of-type { margin-top: 1rem; }
   @media (max-width: 576px) {
     .xp-item { grid-template-columns: 44px 1fr; gap: .85rem; }
-    .xp-logo { width: 44px; height: 44px; border-radius: 10px; }
+    .xp-logo { width: 44px; height: 44px; border-radius: 10px; padding: 4px; }
     .xp-dates { white-space: normal; }
   }
 </style>
@@ -54,7 +56,7 @@ nav_order: 3
 
 <ul class="xp-list">
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/amazon.svg' | relative_url }}" alt="Amazon logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/amazon.png' | relative_url }}" alt="Amazon logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">Amazon</p>
@@ -75,7 +77,7 @@ nav_order: 3
   </li>
 
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/nomura.svg' | relative_url }}" alt="Nomura logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/nomura.jpg' | relative_url }}" alt="Nomura logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">Nomura</p>
@@ -96,7 +98,7 @@ nav_order: 3
   </li>
 
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/aiassistant.svg' | relative_url }}" alt="AIAssistant Startup logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/aiassistant.jpg' | relative_url }}" alt="AIAssistant Startup logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">AIAssistant Startup</p>
@@ -116,7 +118,7 @@ nav_order: 3
   </li>
 
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/ey.svg' | relative_url }}" alt="Ernst &amp; Young logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/ey.png' | relative_url }}" alt="Ernst &amp; Young logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">Ernst &amp; Young</p>
@@ -135,7 +137,7 @@ nav_order: 3
   </li>
 
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/jio.svg' | relative_url }}" alt="Jio Platforms logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/jio.png' | relative_url }}" alt="Jio Platforms logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">Jio Platforms Limited</p>
@@ -159,7 +161,7 @@ nav_order: 3
 
 <ul class="xp-list">
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/iitkgp.svg' | relative_url }}" alt="IIT Kharagpur logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/iitkgp.jpg' | relative_url }}" alt="IIT Kharagpur logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">IIT Kharagpur</p>
@@ -179,7 +181,7 @@ nav_order: 3
   </li>
 
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/iitindore.svg' | relative_url }}" alt="IIT Indore logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/iitindore.png' | relative_url }}" alt="IIT Indore logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">IIT Indore</p>
@@ -199,7 +201,7 @@ nav_order: 3
   </li>
 
   <li class="xp-item">
-    <img class="xp-logo" src="{{ '/assets/img/logos/drdo.svg' | relative_url }}" alt="DRDO logo" loading="lazy" />
+    <img class="xp-logo" src="{{ '/assets/img/logos/drdo.png' | relative_url }}" alt="DRDO logo" loading="lazy" />
     <div>
       <div class="xp-head">
         <p class="xp-company">RCI — DRDO</p>

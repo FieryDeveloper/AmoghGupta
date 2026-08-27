@@ -10,7 +10,6 @@ MS Computer Science at UNC Chapel Hill — LLM alignment, safe-helpfulness, and 
 | ------------------------- | -------------------------------------------- |
 | Bio, profile photo, links | `_pages/about.md`, `assets/img/prof_pic.jpg` |
 | Publications              | `_bibliography/papers.bib`                   |
-| Projects                  | `_projects/*.md`                             |
 | News / announcements      | `_news/*.md`                                 |
 | Teaching                  | `_teachings/*.md`                            |
 | CV (rendered page)        | `_data/cv.yml`                               |

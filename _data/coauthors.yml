@@ -1,6 +1,9 @@
-# Map co-author last names to their homepages so jekyll-scholar can link them
-# in the bibliography. Example:
-#
-# "chaturvedi":
-#   - firstname: ["Snigdha", "S."]
-#     url: https://sites.google.com/site/snigdhac/
+# Map co-author last names to their homepages so jekyll-scholar links them
+# in the bibliography.
+"chaturvedi":
+  - firstname: ["Snigdha", "S."]
+    url: https://sites.google.com/site/snigdhac/
+
+"gaikwad":
+  - firstname: ["S. N. S.", "Snehalkumar", "Neil"]
+    url: https://www.cs.unc.edu/~gaikwad/
