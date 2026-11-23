@@ -1,0 +1,27 @@
+{%- comment -%}
+  Header of a case study on the homepage: logo, company, role, dates.
+  If the item has a `url`, the company name links to it.
+  Usage: {% include home/case_head.liquid item=case %}
+{%- endcomment -%}
+<header class="case-head">
+  <img class="logo" src="{{ include.item.logo | prepend: '/assets/img/logos/' | relative_url }}" alt="" width="48" height="48" loading="lazy">
+  <div class="case-id">
+    <h3>
+      {% if include.item.url %}
+        <a href="{{ include.item.url }}" target="_blank" rel="noopener">
+          {{ include.item.company }}
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-arrow" />
+          </svg>
+        </a>
+      {% else %}
+        {{ include.item.company }}
+      {% endif %}
+    </h3>
+    <p>{{ include.item.role }}</p>
+  </div>
+  <p class="case-when">
+    <span>{{ include.item.dates }}</span>
+    <small>{{ include.item.location }}</small>
+  </p>
+</header>

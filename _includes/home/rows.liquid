@@ -1,0 +1,19 @@
+{%- comment -%}
+  A hairline list of entries, each with `meta`, `title`, `note` and an optional `url`.
+  Usage: {% include home/rows.liquid rows=site.data.home.education %}
+{%- endcomment -%}
+<ul class="rows" data-reveal>
+  {% for row in include.rows %}
+    <li class="row">
+      <span class="row-meta">{{ row.meta }}</span>
+      <span class="row-main">
+        {% if row.url %}
+          <a href="{{ row.url }}" target="_blank" rel="noopener">{{ row.title }}</a>
+        {% else %}
+          {{ row.title }}
+        {% endif %}
+        <small>{{ row.note }}</small>
+      </span>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,24 @@
+---
+permalink: /404.html
+layout: null
+title: Page not found
+description: Nothing exists at this address.
+sitemap: false
+---
+
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include home/head.liquid %}
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <main class="notice">
+      <p class="eyebrow"><span>404</span>Signal lost</p>
+      <h1 class="notice-code">404</h1>
+      <p>Nothing exists at this address. It may have moved when the site was rebuilt.</p>
+      <a class="btn btn-primary" href="{{ '/' | relative_url }}">Back to the homepage</a>
+    </main>
+  </body>
+</html>

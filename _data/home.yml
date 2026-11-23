@@ -1,0 +1,250 @@
+# Content for the one-page homepage (_pages/home.html).
+# Edit text here; the page layout lives in _pages/home.html, styling in
+# _includes/home/styles.css, behaviour in assets/js/home.js.
+#
+# Text fields may contain inline HTML (<strong>, <em>, <a>).
+
+hero:
+  role: Engineer and alignment researcher
+  location: Chapel Hill, NC
+  status: Building something new. More soon.
+  headline_lead: I build AI that is safe
+  headline_accent: and still useful.
+  intro: >
+    I work on LLM alignment at UNC Chapel Hill and build the systems around it. Before that I shipped speech
+    infrastructure for Alexa at Amazon, voice agents at an AI startup, and production software at Nomura and EY.
+  figure_caption: >
+    Most aligned models sit top left. The work is moving them right without moving them down.
+
+# Shown as a strip under the hero. `anchor` is the id of a block further down the page.
+# `logo` is a file in assets/img/logos/; without one, `mark` is shown as a text monogram.
+worked_at:
+  - name: Amazon
+    logo: amazon.png
+    anchor: amazon
+  - name: AIAssistant
+    logo: aiassistant.jpg
+    anchor: aiassistant
+  - name: Nomura
+    logo: nomura.jpg
+    anchor: nomura
+  - name: Ernst & Young
+    logo: ey.png
+    anchor: ey
+  - name: UNC NLP
+    mark: UNC
+    anchor: research
+
+# `value` is the number that counts up; prefix/suffix are static text around it.
+stats:
+  - value: 5
+    suffix: K+
+    label: audio files generated on the fly for Alexa accent regression testing
+  - value: 80
+    suffix: "+"
+    label: code reviews shipped at Amazon, across four packages
+  - value: 200
+    suffix: "%"
+    label: search efficiency gain on a RAG pipeline at EY
+  - value: 2
+    label: "papers in 2026: EMNLP Findings and ACM FAccT"
+
+work:
+  heading_lead: Shipped at Amazon, Nomura, EY
+  heading_accent: and an AI startup.
+  lede: >
+    Four teams, four very different definitions of "working". Shipping to each one is where my standards
+    for evaluation come from.
+
+  # Full-width case studies.
+  featured:
+    - id: amazon
+      company: Amazon
+      logo: amazon.png
+      role: Software Development Engineer Intern · Alexa Audio
+      dates: May – Aug 2026
+      location: Seattle, WA
+      title: "A3LS: accent regression testing for Alexa"
+      body: >
+        Speech recognition degrades unevenly across accents, and a regression there stays invisible unless you
+        test for it. A3LS generates 5,000+ audio files on the fly across multiple accents for Alexa regression
+        testing, then scores how far recognition drops for each one.
+      points:
+        - A Step Functions pipeline fans synthesis and scoring out across every utterance and accent, reporting per-accent WER and AIER.
+        - A React/Cloudscape dashboard over a CloudWatch metrics API surfaces per-accent accuracy, latency percentiles and GPU concurrency.
+        - Wrote the HLD/LLD design docs and drove cross-team reviews to add an accent dimension to production ASR test runs.
+        - 80+ code reviews across four packages (Smithy, Java, CDK, React), owning CI/CD end to end.
+      metric: 5K+
+      metric_label: audio files synthesized on the fly, across accents, for Alexa regression testing
+      flow_title: How a run works
+      flow:
+        - label: Utterances
+          note: test inputs
+        - label: Text to speech
+          note: across multiple accents
+        - label: ASR
+          note: transcribes each file
+        - label: WER / AIER
+          note: scored per accent
+        - label: Dashboard
+          note: per-accent results
+      tags: ["Java", "AWS Step Functions", "Lambda", "Smithy", "CDK", "React", "CloudWatch"]
+
+    - id: aiassistant
+      company: AIAssistant
+      logo: aiassistant.jpg
+      url: https://aiassistant.co/
+      role: Founding Engineer · Voice and agentic AI startup
+      dates: Aug – Dec 2024
+      location: California · Remote
+      title: Voice agents, from first call to client demo
+      body: >
+        Founding engineer at an early-stage startup building voice and agentic AI for its clients. I built the
+        services behind the calls and turned ideas into working prototypes the team could put in front of customers.
+      points:
+        - Prototyped call summarization, healthcare assistants and lead-generation voice systems for client demos.
+        - Built the integrations across Twilio, Deepgram and ElevenLabs that carry a call from audio to answer.
+        - Shipped FastAPI backends in Python for multiple clients.
+      metric: "3"
+      metric_label: "voice systems prototyped for client demos: call summarization, healthcare assistants, lead generation"
+      flow_title: The loop behind a call
+      flow:
+        - label: Phone call
+          note: Twilio
+        - label: Speech to text
+          note: Deepgram
+        - label: Agent logic
+          note: FastAPI backend
+        - label: Text to speech
+          note: ElevenLabs
+      tags: ["FastAPI", "Python", "Twilio", "Deepgram", "ElevenLabs"]
+
+  # Half-width case studies, shown side by side.
+  cases:
+    - id: nomura
+      company: Nomura
+      logo: nomura.jpg
+      role: Software Engineering Intern
+      dates: Jan – Jun 2025
+      location: Mumbai, India
+      metric: 40+
+      metric_label: tickets resolved in six months
+      body: >
+        Engineering on an internal budgeting and financial planning application used by multiple teams.
+      points:
+        - Delivered features end to end, with React on the frontend and Spring Boot services behind it.
+        - Focused on performance, bug fixes and user experience.
+        - Worked in an Agile team with Jenkins CI/CD and SQL at the data layer.
+      tags: ["React", "Java Spring Boot", "SQL", "Jenkins"]
+
+    - id: ey
+      company: Ernst & Young
+      logo: ey.png
+      role: Data and GenAI Intern
+      dates: May – Aug 2024
+      location: Pune, India
+      metric_from: "10,000"
+      metric: "50"
+      metric_label: documents searched per query
+      body: >
+        Generative AI solutions for Fortune 100 clients, including a chatbot backed by a RAG pipeline over 10,000+ documents.
+      points:
+        - Metadata filters narrow each search from 10,000 documents to 50 before retrieval runs.
+        - Search efficiency improved by 200%.
+      tags: ["RAG", "Vector search", "Python", "GenAI"]
+
+  earlier:
+    - meta: 2023 · RCI, DRDO
+      title: Machine Learning Intern
+      note: Anomaly detection across more than one million logs with One-Class SVM, KMeans and Isolation Forests.
+    - meta: 2023 · Jio Platforms
+      title: Artificial Intelligence Intern
+      note: Recommendation algorithms, including Apriori, to improve business operations.
+
+research:
+  heading_lead: Alignment research at UNC.
+  heading_accent: Safe, without being useless.
+  lede: >
+    I'm a graduate researcher in NLP at UNC Chapel Hill, advised by
+    <a href="https://sites.google.com/site/snigdhac/">Prof. Snigdha Chaturvedi</a>. Aligned models often refuse
+    requests they could have answered safely. I work on methods that win that helpfulness back, and I build the
+    training and evaluation pipelines that show whether they do.
+
+  papers:
+    - venue: EMNLP 2026 Findings
+      title: "SHARD: Safe and Helpful Alignment via Self-Reframing Distillation"
+      summary: >
+        Aligned models over-refuse: they decline a sensitive prompt, or answer with safety boilerplate, when the
+        underlying need could have been met safely. SHARD uses self-reframing distillation to win that helpfulness
+        back without weakening safety.
+      authors: "V. Manoranjan, <strong>Amogh Gupta</strong>, A. R. Vijjini, T. Hofweber, S. Chaturvedi"
+      figure: shard
+      figure_alt: "SHARD pipeline: an unhelpful refusal is reframed with philosophical guidelines, distilled, and yields a safe and helpful answer"
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2606.15517
+    - venue: ACM FAccT 2026
+      title: "Compounding Disadvantage: Auditing Intersectional Bias in LLM-Generated Explanations Across Indian and American STEM Education"
+      summary: >
+        An audit of AI-generated explanations in Indian and American STEM settings. Bias across language, caste and
+        social context does not simply add up. It compounds.
+      authors: "<strong>Amogh Gupta</strong>, N. R. Patil, S. Ghosh, S. N. S. Gaikwad"
+      figure: compounding
+      figure_alt: "Audit design from the Compounding Disadvantage paper: student identities and tasks are sent to several LLMs and the outputs measured for bias"
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2601.14506
+
+  # The research and engineering mix.
+  toolkit_title: The research and engineering mix
+  toolkit:
+    - name: Train
+      note: Post-training methods for alignment.
+      items: ["Distillation", "SFT", "RLHF", "DPO", "LoRA / QLoRA"]
+    - name: Evaluate
+      note: Knowing what a result actually licenses you to claim.
+      items: ["Red-teaming", "Bias audits", "LLM evaluation", "Interpretability"]
+    - name: Scale
+      note: The engineering that makes the experiments run.
+      items: ["PyTorch", "Transformers", "vLLM", "Distributed training", "AWS"]
+
+  labs:
+    - meta: Now · UNC NLP
+      title: Chaturvedi Lab
+      note: LLM alignment and safe-helpfulness with Prof. Snigdha Chaturvedi.
+    - meta: Earlier · UNC
+      title: Society-Centered AI Lab
+      note: Responsible AI and bias auditing with Dr. Neil Gaikwad.
+    - meta: 2024 · IIT Kharagpur
+      title: Red-teaming and multilingual jailbreaks
+      note: Evaluated jailbreak robustness across ChatGPT, Gemini, Nous-Hermes, Mixtral Instruct and Cohere Coral.
+    - meta: 2024 · IIT Indore
+      title: Disaster-tweet summarization
+      note: LLMs and integer linear programming to cut 3,000 tweets down to the 40 that matter.
+
+  earlier_papers:
+    - meta: IEEE INDISCON 2024
+      title: YOLOv8 Based Detection of Fall Armyworm in Field Crops
+      note: "P. Mhala, <strong>Amogh Gupta</strong>, S. Sharma"
+    - meta: ICIT 2024
+      title: "Automated Animal Intrusion Detection: A Deep Learning Approach"
+      note: "<strong>Amogh Gupta</strong>, S. Sharma, M. Mangal"
+    - meta: Preprint 2024
+      title: "Traffic Sign Sensing: A Deep Learning Approach for Enhanced Road Safety"
+      note: "<strong>Amogh Gupta</strong>, P. Mhala, M. Mangal, K. Yadav, S. Sharma"
+      url: https://www.researchsquare.com/article/rs-3889986/v1
+
+education:
+  - meta: 2025 – 2027
+    title: UNC Chapel Hill
+    note: MS, Computer Science. NLP and LLM alignment.
+  - meta: 2021 – 2025
+    title: IIIT Pune
+    note: B.Tech, Computer Science, with Honors in Machine Learning.
+
+contact:
+  headline_lead: Let's build
+  headline_accent: something.
+  note: >
+    Email is the fastest way to reach me. I'm always up for a conversation about alignment,
+    evaluation, or what you're building.

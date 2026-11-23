@@ -1,11 +1,13 @@
 {%- comment -%}
-Local override of al_folio_core's metadata.liquid.
-Changes from upstream:
-  - twitter:card becomes summary_large_image when an og_image is set, so
-    shared links render a full-width preview card.
-  - twitter:title leads with the site name instead of the bare page slug
-    (it previously rendered as just "about" on the home page).
-Delete this file to fall back to the gem's version.
+  Local override of al_folio_core's metadata.liquid.
+  Changes from upstream:
+    - twitter:card becomes summary_large_image when an og_image is set, so
+      shared links render a full-width preview card.
+    - twitter:title leads with the site name instead of the bare page slug
+      (it previously rendered as just "about" on the home page).
+    - schema.org headline falls back to the resolved site name, so a page with
+      no title (the standalone homepage) does not emit the literal "blank".
+  Delete this file to fall back to the gem's version.
 {%- endcomment -%}
 {% if site.enable_google_verification or site.enable_bing_verification %}
   <!-- Website verification -->
@@ -251,7 +253,7 @@ Delete this file to fall back to the gem's version.
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
         "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}",
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}

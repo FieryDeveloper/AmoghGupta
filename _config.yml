@@ -7,12 +7,12 @@ first_name: Amogh
 middle_name:
 last_name: Gupta
 contact_note: >
-  Email is the fastest way to reach me. I am always happy to talk about LLM alignment,
-  safe-helpfulness, and responsible AI evaluation.
+  Email is the fastest way to reach me. I'm always up for a conversation about alignment,
+  evaluation, or what you're building.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Amogh Gupta is an MS Computer Science student at UNC Chapel Hill researching LLM alignment,
-  safe-helpfulness, and responsible AI. Author of SHARD (EMNLP 2026 Findings) and Compounding
-  Disadvantage (ACM FAccT 2026), with engineering experience at Amazon, Nomura, and Ernst & Young.
+  Amogh Gupta builds AI systems that are safe and still useful. LLM alignment researcher at UNC Chapel Hill
+  and engineer with experience at Amazon Alexa, Nomura and Ernst & Young. Author of SHARD (EMNLP 2026 Findings)
+  and Compounding Disadvantage (ACM FAccT 2026).
 footer_text:
 keywords: Amogh Gupta, Amogh Gupta UNC, Amogh Gupta Chapel Hill, LLM alignment, responsible AI, AI safety, NLP researcher, machine learning, UNC Chapel Hill, SHARD, FAccT # add your own keywords or leave empty
 x_username: AmoghGupta04 # X/Twitter handle, used for twitter:site and twitter:creator card attribution
@@ -98,7 +98,7 @@ al_folio:
 
 navbar_fixed: true
 footer_fixed: false
-search_enabled: true
+search_enabled: false # the one-page site has no search UI; also stops al_search generating its index
 socials_in_search: true
 posts_in_search: true
 bib_search: true
@@ -189,17 +189,18 @@ newsletter:
 # Collections
 # -----------------------------------------------------------------------------
 
+# The site is a single page (_pages/home.html). `news` and `teachings` are read
+# as data for its Log and Teaching sections, so they do not render pages of
+# their own.
 collections:
   books:
     output: true
   news:
-    defaults:
-      layout: post
-    output: true
+    output: false
   projects:
     output: true
   teachings:
-    output: true
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -238,6 +239,8 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - requirements.txt
+  - test/
   - gems/
   - migrations/
   - vendor
@@ -296,6 +299,11 @@ plugins:
 defaults:
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  # Search Console ownership file: must stay reachable, but is not a page.
+  - scope:
+      path: "google77542ae9ffc0dc2a.html"
     values:
       sitemap: false
 
@@ -685,9 +693,12 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
+# Disabled: the only entry loaded the template's sample resume (assets/json/resume.json),
+# which is not used by this site. To use a JSON resume, add your own file and restore:
+#   jekyll_get_json:
+#     - data: resume
+#       json: assets/json/resume.json
+jekyll_get_json: []
 
 jsonresume:
   - basics

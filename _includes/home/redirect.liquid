@@ -1,0 +1,30 @@
+{%- comment -%}
+  Redirect stub for URLs that existed before the one-page rebuild.
+  Front matter: `redirect_anchor` (a section id on the homepage) or
+  `redirect_path` (a site-relative path, e.g. the CV PDF).
+{%- endcomment -%}
+{%- if page.redirect_path -%}
+  {%- assign target = page.redirect_path | relative_url -%}
+{%- else -%}
+  {%- assign target = '/' | relative_url | append: '#' | append: page.redirect_anchor -%}
+{%- endif -%}
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Redirecting |
+      {{ site.first_name }}
+      {{ site.last_name }}
+    </title>
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ '/' | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ target }}">
+    <script>
+      location.replace({{ target | jsonify }});
+    </script>
+  </head>
+  <body style="background: #07080a; color: #f2f2ed; font-family: system-ui, sans-serif; padding: 2rem">
+    <p>This page moved. <a href="{{ target }}" style="color: #b9ff66">Continue</a>.</p>
+  </body>
+</html>

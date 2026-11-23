@@ -1,0 +1,454 @@
+---
+permalink: /
+layout: null
+---
+
+{%- assign home = site.data.home -%} {%- assign socials = site.data.socials -%} {%- assign cv_url = socials.cv_pdf | relative_url -%} {%- assign news
+= site.news | sort: 'date' | reverse -%} {%- assign teachings = site.teachings | sort: 'year' | reverse -%}
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include home/head.liquid %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Amogh Gupta",
+        "givenName": "Amogh",
+        "familyName": "Gupta",
+        "url": "{{ '/' | absolute_url }}",
+        "image": "{{ '/assets/img/prof_pic.jpg' | absolute_url }}",
+        "email": "mailto:{{ socials.email }}",
+        "jobTitle": "Engineer and LLM alignment researcher",
+        "description": "Amogh Gupta builds AI systems that are safe and still useful. Graduate researcher in NLP and LLM alignment at UNC Chapel Hill; previously Amazon Alexa Audio, Nomura and Ernst & Young. Author of SHARD (EMNLP 2026 Findings) and Compounding Disadvantage (ACM FAccT 2026).",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of North Carolina at Chapel Hill",
+          "department": { "@type": "Organization", "name": "Department of Computer Science" },
+          "url": "https://cs.unc.edu/"
+        },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Indian Institute of Information Technology Pune", "url": "https://www.iiitp.ac.in/" }
+        ],
+        "knowsAbout": [
+          "LLM Alignment",
+          "Large Language Models",
+          "Natural Language Processing",
+          "Responsible AI",
+          "AI Safety",
+          "Speech Recognition Testing",
+          "Red-Teaming",
+          "Machine Learning",
+          "Model Evaluation"
+        ],
+        "sameAs": [
+          "https://github.com/{{ socials.github_username }}",
+          "https://www.linkedin.com/in/{{ socials.linkedin_username }}",
+          "https://scholar.google.com/citations?user={{ socials.scholar_userid }}",
+          "https://x.com/{{ socials.x_username }}"
+        ]
+      }
+    </script>
+  </head>
+
+  <body id="top">
+    {% include home/icons.liquid %}
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Amogh Gupta, back to top">
+          <span class="brand-mark">AG</span>
+          <span class="brand-name">Amogh Gupta</span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Sections">
+          <a href="#work">Work</a>
+          <a href="#research">Research</a>
+          <a href="#background">Background</a>
+          <a href="#log">Log</a>
+        </nav>
+        <a class="btn btn-primary btn-sm nav-cta" href="mailto:{{ socials.email }}">Get in touch</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="ident" data-reveal>
+              <picture>
+                <source type="image/webp" srcset="{{ '/assets/img/prof_pic-480.webp' | relative_url }}" />
+                <img
+                  class="avatar"
+                  src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+                  alt="Portrait of Amogh Gupta"
+                  width="64"
+                  height="64"
+                  fetchpriority="high"
+                />
+              </picture>
+              <p class="ident-text">
+                <strong>{{ home.hero.role }}</strong>
+                <span>{{ home.hero.location }}</span>
+              </p>
+              <p class="status"><span class="status-dot"></span>{{ home.hero.status }}</p>
+            </div>
+            <h1 class="hero-title" data-reveal>
+              <span class="lead">{{ home.hero.headline_lead }}</span>
+              <em>{{ home.hero.headline_accent }}</em>
+            </h1>
+            <p class="hero-intro" data-reveal>{{ home.hero.intro }}</p>
+            <div class="hero-actions" data-reveal>
+              <a class="btn btn-primary" href="mailto:{{ socials.email }}">
+                <svg class="icon"><use href="#i-mail" /></svg>
+                Get in touch
+              </a>
+              <a class="btn btn-ghost" href="#work">See the work</a>
+              <a class="btn btn-ghost" href="{{ cv_url }}" target="_blank" rel="noopener">
+                <svg class="icon"><use href="#i-down" /></svg>
+                CV
+              </a>
+            </div>
+            <ul class="socials" data-reveal>
+              <li>
+                <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg class="icon"><use href="#i-github" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg class="icon"><use href="#i-linkedin" /></svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Google Scholar"
+                >
+                  <svg class="icon"><use href="#i-scholar" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/{{ socials.x_username }}" target="_blank" rel="noopener" aria-label="X">
+                  <svg class="icon"><use href="#i-x" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <figure class="plot" data-reveal>
+            <svg viewBox="0 0 480 384" role="img" aria-labelledby="plot-title plot-desc">
+              <title id="plot-title">Safe versus useful</title>
+              <desc id="plot-desc">
+                A chart with usefulness on the horizontal axis and safety on the vertical axis. Models that refuse everything sit top left, models
+                that answer anything sit bottom right. The target is top right: safe and useful.
+              </desc>
+              <rect class="plot-target" x="324" y="16" width="140" height="107" />
+              <path class="plot-grid" d="M184 16v320M324 16v320M44 123h420M44 229h420" />
+              <rect class="plot-frame" x="44" y="16" width="420" height="320" rx="14" />
+              <path class="plot-path" id="plot-route" d="M114 84C190 186 320 186 394 84" />
+              <circle class="plot-point" cx="114" cy="84" r="5" />
+              <circle class="plot-point" cx="394" cy="276" r="5" />
+              <circle class="plot-halo" cx="394" cy="84" r="15" />
+              <circle class="plot-goal" cx="394" cy="84" r="6" />
+              <circle class="plot-runner" r="4">
+                <animateMotion
+                  dur="5s"
+                  repeatCount="indefinite"
+                  calcMode="spline"
+                  keyPoints="0;1;1"
+                  keyTimes="0;0.65;1"
+                  keySplines="0.45 0 0.2 1;0 0 1 1"
+                >
+                  <mpath href="#plot-route" />
+                </animateMotion>
+              </circle>
+              <text class="plot-label" x="114" y="58" text-anchor="middle">refuses everything</text>
+              <text class="plot-label" x="394" y="306" text-anchor="middle">answers anything</text>
+              <text class="plot-label plot-label-goal" x="394" y="54" text-anchor="middle">safe and useful</text>
+              <text class="plot-label plot-label-route" x="254" y="186" text-anchor="middle">reframe, then distill</text>
+              <text class="plot-axis" x="254" y="366" text-anchor="middle">useful &#8594;</text>
+              <text class="plot-axis" x="22" y="176" text-anchor="middle" transform="rotate(-90 22 176)">safe &#8594;</text>
+            </svg>
+            <figcaption><span>Fig. 1</span>{{ home.hero.figure_caption }}</figcaption>
+          </figure>
+        </div>
+
+        <div class="container">
+          <ul class="orgs" data-reveal aria-label="Where I have worked">
+            {% for org in home.worked_at %}
+            <li>
+              <a href="#{{ org.anchor }}">
+                {% if org.logo %}
+                <img class="logo logo-sm" src="{{ org.logo | prepend: '/assets/img/logos/' | relative_url }}" alt="" width="32" height="32" />
+                {% else %}
+                <span class="logo logo-sm logo-mark" aria-hidden="true">{{ org.mark }}</span>
+                {% endif %}
+                <span>{{ org.name }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+
+          <dl class="stats" data-reveal>
+            {% for stat in home.stats %}
+            <div class="stat">
+              <dd>{{ stat.prefix }}<span data-count="{{ stat.value }}">{{ stat.value }}</span>{{ stat.suffix }}</dd>
+              <dt>{{ stat.label }}</dt>
+            </div>
+            {% endfor %}
+          </dl>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section class="section" id="work">
+        <div class="container split">
+          <p class="eyebrow rail"><span>01</span>Work</p>
+          <div class="main">
+            <header class="section-head" data-reveal>
+              <h2>
+                {{ home.work.heading_lead }}
+                <em>{{ home.work.heading_accent }}</em>
+              </h2>
+              <p class="lede">{{ home.work.lede }}</p>
+            </header>
+
+            {% for item in home.work.featured %}
+            <article class="case case-feature" id="{{ item.id }}" data-reveal data-spot>
+              {% include home/case_head.liquid item=item %}
+              <div class="case-grid">
+                <div class="case-copy">
+                  <h4>{{ item.title }}</h4>
+                  <p class="case-body">{{ item.body }}</p>
+                  <ul class="points">
+                    {% for point in item.points %}
+                    <li>{{ point }}</li>
+                    {% endfor %}
+                  </ul>
+                  <ul class="tags">
+                    {% for tag in item.tags %}
+                    <li>{{ tag }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <aside class="case-side">
+                  <p class="metric">{{ item.metric }}</p>
+                  <p class="metric-label">{{ item.metric_label }}</p>
+                  <p class="flow-title">{{ item.flow_title }}</p>
+                  <ol class="flow">
+                    {% for step in item.flow %}
+                    <li>
+                      <strong>{{ step.label }}</strong>
+                      <span>{{ step.note }}</span>
+                    </li>
+                    {% endfor %}
+                  </ol>
+                </aside>
+              </div>
+            </article>
+            {% endfor %}
+
+            <div class="case-pair">
+              {% for item in home.work.cases %}
+              <article class="case" id="{{ item.id }}" data-reveal data-spot>
+                {% include home/case_head.liquid item=item %}
+                <p class="metric">
+                  {% if item.metric_from %}
+                  <s>{{ item.metric_from }}</s>
+                  <svg class="icon metric-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                  {% endif %} {{ item.metric }}
+                </p>
+                <p class="metric-label">{{ item.metric_label }}</p>
+                <p class="case-body">{{ item.body }}</p>
+                <ul class="points">
+                  {% for point in item.points %}
+                  <li>{{ point }}</li>
+                  {% endfor %}
+                </ul>
+                <ul class="tags">
+                  {% for tag in item.tags %}
+                  <li>{{ tag }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+              {% endfor %}
+            </div>
+
+            <h3 class="subhead" data-reveal>Earlier</h3>
+            {% include home/rows.liquid rows=home.work.earlier %}
+          </div>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section class="section" id="research">
+        <div class="container split">
+          <p class="eyebrow rail"><span>02</span>Research</p>
+          <div class="main">
+            <header class="section-head" data-reveal>
+              <h2>
+                {{ home.research.heading_lead }}
+                <em>{{ home.research.heading_accent }}</em>
+              </h2>
+              <p class="lede">{{ home.research.lede }}</p>
+            </header>
+
+            <div class="papers">
+              {% for paper in home.research.papers %} {%- capture figure_base -%}{{ paper.figure | prepend: '/assets/img/publication_preview/' |
+              relative_url }}{%- endcapture -%}
+              <article class="paper" data-reveal data-spot>
+                <a class="paper-figure" href="{{ figure_base }}.png" target="_blank" rel="noopener" title="Open full-size figure">
+                  <img
+                    src="{{ figure_base }}-800.webp"
+                    srcset="{{ figure_base }}-800.webp 800w, {{ figure_base }}-1400.webp 1400w"
+                    sizes="(max-width: 820px) 92vw, 440px"
+                    alt="{{ paper.figure_alt }}"
+                    loading="lazy"
+                  />
+                </a>
+                <p class="venue">{{ paper.venue }}</p>
+                <h3>{{ paper.title }}</h3>
+                <p class="case-body">{{ paper.summary }}</p>
+                <p class="authors">{{ paper.authors }}</p>
+                <p class="paper-links">
+                  {% for link in paper.links %}
+                  <a class="btn btn-ghost btn-sm" href="{{ link.url }}" target="_blank" rel="noopener">
+                    {{ link.label }}
+                    <svg class="icon"><use href="#i-arrow" /></svg>
+                  </a>
+                  {% endfor %}
+                </p>
+              </article>
+              {% endfor %}
+            </div>
+
+            <h3 class="subhead" data-reveal>{{ home.research.toolkit_title }}</h3>
+            <div class="toolkit" data-reveal>
+              {% for group in home.research.toolkit %}
+              <div>
+                <h4>{{ group.name }}</h4>
+                <p>{{ group.note }}</p>
+                <ul class="tags">
+                  {% for item in group.items %}
+                  <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endfor %}
+            </div>
+
+            <h3 class="subhead" data-reveal>Labs</h3>
+            {% include home/rows.liquid rows=home.research.labs %}
+
+            <h3 class="subhead" data-reveal>Earlier papers</h3>
+            {% include home/rows.liquid rows=home.research.earlier_papers %}
+          </div>
+        </div>
+      </section>
+
+      <!-- Background -->
+      <section class="section" id="background">
+        <div class="container split">
+          <p class="eyebrow rail"><span>03</span>Background</p>
+          <div class="main duo">
+            <div>
+              <h3 class="subhead subhead-first" data-reveal>Teaching</h3>
+              <ul class="rows" data-reveal>
+                {% for course in teachings %}
+                <li class="row">
+                  <span class="row-meta">{{ course.term }} {{ course.year }}</span>
+                  <span class="row-main">
+                    {{ course.title }}
+                    <small>{{ course.description }}</small>
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div>
+              <h3 class="subhead subhead-first" data-reveal>Education</h3>
+              {% include home/rows.liquid rows=home.education %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Log -->
+      <section class="section" id="log">
+        <div class="container split">
+          <p class="eyebrow rail"><span>04</span>Log</p>
+          <div class="main">
+            <ol class="log" data-reveal>
+              {% for item in news %}
+              <li>
+                <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
+                <div class="log-text">{{ item.content | markdownify | emojify }}</div>
+              </li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="contact-panel" data-reveal>
+            <p class="eyebrow"><span>05</span>Contact</p>
+            <h2>
+              {{ home.contact.headline_lead }}
+              <em>{{ home.contact.headline_accent }}</em>
+            </h2>
+            <p class="lede">{{ home.contact.note }}</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary btn-lg" href="mailto:{{ socials.email }}">
+                <svg class="icon"><use href="#i-mail" /></svg>
+                {{ socials.email }}
+              </a>
+              <button class="btn btn-ghost btn-lg" type="button" id="copy-email" data-email="{{ socials.email }}">
+                <svg class="icon"><use href="#i-copy" /></svg>
+                <span>Copy address</span>
+              </button>
+            </div>
+            <ul class="contact-links">
+              <li>
+                <a href="https://github.com/{{ socials.github_username }}" target="_blank" rel="noopener">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}" target="_blank" rel="noopener">Google Scholar</a>
+              </li>
+              <li>
+                <a href="https://x.com/{{ socials.x_username }}" target="_blank" rel="noopener">X</a>
+              </li>
+              <li>
+                <a href="{{ cv_url }}" target="_blank" rel="noopener">CV (PDF)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>&copy; {{ site.time | date: '%Y' }} Amogh Gupta</span>
+        <span>{{ home.hero.location }}</span>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script defer src="{{ '/assets/js/home.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  </body>
+</html>
