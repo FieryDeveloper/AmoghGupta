@@ -55,7 +55,6 @@ layout: null
     {% include home/icons.liquid %}
     <a class="skip" href="#main">Skip to content</a>
     <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
-    <div class="backdrop" aria-hidden="true"></div>
 
     <header class="nav" id="nav">
       <div class="nav-inner">
@@ -103,6 +102,20 @@ layout: null
               <span class="lead">{{ home.hero.headline_lead }}</span>
               <em>{{ home.hero.headline_accent }}</em>
             </h1>
+            <ul class="orgs" data-reveal aria-label="Where I have worked">
+              {% for org in home.worked_at %}
+              <li>
+                <a href="#{{ org.anchor }}">
+                  {% if org.logo %}
+                  <img class="logo logo-sm" src="{{ org.logo | prepend: '/assets/img/logos/' | relative_url }}" alt="" width="32" height="32" />
+                  {% else %}
+                  <span class="logo logo-sm logo-mark" aria-hidden="true">{{ org.mark }}</span>
+                  {% endif %}
+                  <span>{{ org.name }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
             <p class="hero-intro" data-reveal>{{ home.hero.intro }}</p>
             <div class="hero-actions" data-reveal>
               <a class="btn btn-primary" href="mailto:{{ socials.email }}">
@@ -178,26 +191,11 @@ layout: null
               <text class="plot-axis" x="254" y="366" text-anchor="middle">useful &#8594;</text>
               <text class="plot-axis" x="22" y="176" text-anchor="middle" transform="rotate(-90 22 176)">safe &#8594;</text>
             </svg>
-            <figcaption><span>Fig. 1</span>{{ home.hero.figure_caption }}</figcaption>
+            <figcaption>Fig. 1. {{ home.hero.figure_caption }}</figcaption>
           </figure>
         </div>
 
         <div class="container">
-          <ul class="orgs" data-reveal aria-label="Where I have worked">
-            {% for org in home.worked_at %}
-            <li>
-              <a href="#{{ org.anchor }}">
-                {% if org.logo %}
-                <img class="logo logo-sm" src="{{ org.logo | prepend: '/assets/img/logos/' | relative_url }}" alt="" width="32" height="32" />
-                {% else %}
-                <span class="logo logo-sm logo-mark" aria-hidden="true">{{ org.mark }}</span>
-                {% endif %}
-                <span>{{ org.name }}</span>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-
           <dl class="stats" data-reveal>
             {% for stat in home.stats %}
             <div class="stat">
@@ -212,7 +210,7 @@ layout: null
       <!-- Work -->
       <section class="section" id="work">
         <div class="container split">
-          <p class="eyebrow rail"><span>01</span>Work</p>
+          <p class="rail">Work</p>
           <div class="main">
             <header class="section-head" data-reveal>
               <h2>
@@ -223,7 +221,7 @@ layout: null
             </header>
 
             {% for item in home.work.featured %}
-            <article class="case case-feature" id="{{ item.id }}" data-reveal data-spot>
+            <article class="case case-feature" id="{{ item.id }}" data-reveal>
               {% include home/case_head.liquid item=item %}
               <div class="case-grid">
                 <div class="case-copy">
@@ -259,7 +257,7 @@ layout: null
 
             <div class="case-pair">
               {% for item in home.work.cases %}
-              <article class="case" id="{{ item.id }}" data-reveal data-spot>
+              <article class="case" id="{{ item.id }}" data-reveal>
                 {% include home/case_head.liquid item=item %}
                 <p class="metric">
                   {% if item.metric_from %}
@@ -292,7 +290,7 @@ layout: null
       <!-- Research -->
       <section class="section" id="research">
         <div class="container split">
-          <p class="eyebrow rail"><span>02</span>Research</p>
+          <p class="rail">Research</p>
           <div class="main">
             <header class="section-head" data-reveal>
               <h2>
@@ -305,7 +303,7 @@ layout: null
             <div class="papers">
               {% for paper in home.research.papers %} {%- capture figure_base -%}{{ paper.figure | prepend: '/assets/img/publication_preview/' |
               relative_url }}{%- endcapture -%}
-              <article class="paper" data-reveal data-spot>
+              <article class="paper" data-reveal>
                 <a class="paper-figure" href="{{ figure_base }}.png" target="_blank" rel="noopener" title="Open full-size figure">
                   <img
                     src="{{ figure_base }}-800.webp"
@@ -358,7 +356,7 @@ layout: null
       <!-- Background -->
       <section class="section" id="background">
         <div class="container split">
-          <p class="eyebrow rail"><span>03</span>Background</p>
+          <p class="rail">Background</p>
           <div class="main duo">
             <div>
               <h3 class="subhead subhead-first" data-reveal>Teaching</h3>
@@ -385,7 +383,7 @@ layout: null
       <!-- Log -->
       <section class="section" id="log">
         <div class="container split">
-          <p class="eyebrow rail"><span>04</span>Log</p>
+          <p class="rail">Log</p>
           <div class="main">
             <ol class="log" data-reveal>
               {% for item in news %}
@@ -403,7 +401,6 @@ layout: null
       <section class="section contact" id="contact">
         <div class="container">
           <div class="contact-panel" data-reveal>
-            <p class="eyebrow"><span>05</span>Contact</p>
             <h2>
               {{ home.contact.headline_lead }}
               <em>{{ home.contact.headline_accent }}</em>

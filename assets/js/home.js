@@ -117,17 +117,6 @@
     if (isFinite(value)) el.textContent = value.toLocaleString("en-US");
   });
 
-  // --- Card spotlight that follows the pointer ---
-  if (window.matchMedia("(hover: hover)").matches) {
-    $$("[data-spot]").forEach(function (card) {
-      card.addEventListener("pointermove", function (event) {
-        var rect = card.getBoundingClientRect();
-        card.style.setProperty("--mx", event.clientX - rect.left + "px");
-        card.style.setProperty("--my", event.clientY - rect.top + "px");
-      });
-    });
-  }
-
   // --- Copy email address ---
   var copyButton = $("#copy-email");
   if (copyButton && navigator.clipboard) {
