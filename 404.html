@@ -414,41 +414,12 @@ h2 em {
   align-items: center;
   gap: 0.6rem;
   margin-left: auto;
-  padding: 0.38rem 0.85rem 0.38rem 0.7rem;
+  padding: 0.38rem 0.85rem;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--quiet);
   font-size: 0.82rem;
   line-height: 1.4;
-}
-
-.status-dot {
-  position: relative;
-  flex: none;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--text);
-}
-
-.status-dot::after {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 1px solid var(--text);
-  animation: ping 2.4s var(--ease) infinite;
-}
-
-@keyframes ping {
-  from {
-    transform: scale(0.6);
-    opacity: 0.9;
-  }
-  to {
-    transform: scale(2.2);
-    opacity: 0;
-  }
 }
 
 .hero-title {
@@ -584,16 +555,6 @@ h2 em {
 .plot-halo {
   fill: var(--text);
   opacity: 0.2;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: halo 2.8s ease-in-out infinite;
-}
-
-@keyframes halo {
-  50% {
-    transform: scale(1.5);
-    opacity: 0.07;
-  }
 }
 
 .plot-label,
